@@ -1,0 +1,202 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+	box-sizing: inherit;
+}
+
+.nobottommargin{
+	margin-bottom: 0 !important;
+}
+
+/* Passo a passo */
+
+.front-passo {
+	padding: 0px 0;
+}
+
+.graphic-title {
+    font-size: 28px;
+    text-transform: uppercase;
+    color: #26a75d;
+    font-weight: 400;
+    width: 100%;
+    margin: 0 auto 36px;
+    padding: 0 24px;
+    display: block;
+    max-width: 500px
+}
+.graphic {
+    margin: 48px 0;
+    display: block;
+    overflow: hidden
+}
+.graphic .item .photo,
+.graphic .item .text {
+    width: 50%;
+    display: inline-block;
+    vertical-align: top
+}
+.graphic .item {
+    font-size: 0;
+    line-height: 0;
+    position: relative;
+}
+.graphic .item .photo {
+    font-size: 14px;
+    line-height: 100%
+}
+.graphic .item .photo img {
+    height: auto;
+    max-width: 100px;
+    max-height: 120px
+}
+.graphic .item .text {
+    min-height: 150px;
+    padding-bottom: 36px
+}
+.graphic .item .text h2 {
+    line-height: 100%;
+    color: #0a2239;
+    font-size: 24px;
+    margin: 8px 0 16px;
+}
+.graphic .item .text p {
+    line-height: 130%;
+    font-size: 14px;
+    color: #52575b
+}
+.graphic .item .separator {
+    background: url('../images/separator.png') center repeat-y;
+    height: 100%;
+    width: 42px;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%)
+}
+.graphic .item .separator i {
+    font-family: Helvetica, Arial, sans-serif;
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    position: absolute;
+    top: 0;
+    background: #26a75d;
+    color: #FFF;
+    line-height: 42px;
+    font-size: 25px;
+    font-weight: 400;
+    text-align: center;
+    font-style: normal
+}
+.graphic .item-left .photo {
+    text-align: right;
+    padding-right: 62px;
+    padding-left: 24px
+}
+.graphic .item-left .text,
+.graphic .item-right .photo {
+    text-align: left;
+    padding-left: 62px;
+    padding-right: 24px
+}
+.graphic .item-right .text {
+    text-align: right;
+    padding-right: 62px;
+    padding-left: 24px
+}
+.graphic .final-item .photo {
+    width: 100%;
+    text-align: center;
+    margin: 48px 0 24px
+}
+.graphic .final-item .photo img {
+    height: auto;
+    max-height: 360px;
+    max-width: 360px
+}
+.graphic .final-item .text {
+    min-height: auto;
+    padding: 0 24px;
+    width: 100%;
+    text-align: center
+}
+.graphic .final-item .separator {
+    background: 0 0
+}
+.graphic .animate-f {
+    animation-play-state: paused;
+    -webkit-animation-play-state: paused;
+    opacity: 0
+}
+.graphic .animated-f {
+    animation-duration: .5s!important;
+    -webkit-animation-duration: .5s!important;
+    animation-play-state: running;
+    -webkit-animation-play-state: running;
+    opacity: 1
+}
+@media only screen and (max-width:768px) {
+    .graphic .item-left .photo,
+    .graphic .item-right .photo {
+        padding-right: 40px
+    }
+    .graphic .item-left .text,
+    .graphic .item-right .text {
+        padding-left: 40px
+    }
+    .graphic .item .text h2 {
+        font-size: 20px
+    }
+}
+
+@media only screen and (max-width:480px) {
+  .graphic .item-left .photo,
+  .graphic .item-right .text {
+      padding-right: 28px
+  }
+  .graphic .item .separator {
+      width: 32px
+  }
+  .graphic .item .separator i {
+      font-size: 18px;
+      line-height: 31px;
+      width: 32px;
+      height: 32px
+  }
+  .graphic .item .photo img {
+      height: auto;
+      max-width: 100px;
+      max-height: 100px
+  }
+  .graphic .item .text h2 {
+      font-size: 18px
+  }
+  .graphic .item-left .text,
+  .graphic .item-right .photo {
+      padding-left: 28px
+  }
+  .graphic .final-item .photo img {
+      height: auto;
+      max-height: 360px;
+      max-width: 360px
+  }
+
+  #home-cursos .front-banner h1 {
+		font-size: 36px;
+	}
+	#home-cursos .front-banner h3 {
+		font-size: 24px;
+	}
+}
+.clearfix{
+	clear: both!important;
+}
